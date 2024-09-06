@@ -1,0 +1,67 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  padding-block: 2rem;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1.75rem;
+}
+
+.input {
+  padding: 0.5rem 0.75rem;
+  border: 0.1rem solid rgb(var(--cl-black));
+  border-radius: var(--radius-sm);
+  background-color: rgb(var(--cl-white));
+  transition: var(--trns);
+  transition-property: border-color, box-shadow;
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgb(var(--cl-accent) / 45%);
+    border-color: rgb(var(--cl-accent));
+  }
+
+  &:has(+ .error) {
+    box-shadow: 0 0 0 4px rgb(var(--cl-error) / 45%);
+    border-color: rgb(var(--cl-error));
+  }
+}
+.error {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 150%;
+  font-size: var(--font-sm);
+  text-align: center;
+  color: rgb(var(--cl-error));
+  animation: fade 150ms ease-in 150ms both;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  color: rgb(var(--cl-white));
+  background-color: rgb(var(--cl-accent) / 75%);
+  border-radius: var(--radius-sm);
+  transition: var(--trns);
+  transition-property: background-color;
+
+  &:hover {
+    background-color: rgb(var(--cl-accent));
+  }
+}

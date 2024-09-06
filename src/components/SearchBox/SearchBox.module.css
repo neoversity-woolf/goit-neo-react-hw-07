@@ -1,0 +1,52 @@
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(var(--cl-white));
+  border: 0.05rem solid rgb(var(--cl-accent));
+  border-radius: var(--radius-sm);
+  transition: var(--trns);
+  transition-property: box-shadow;
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.label {
+  color: rgb(var(--cl-black) / 50%);
+  transition: var(--trns);
+  transition-property: color;
+
+  &:has(+ .field:focus) {
+    color: rgb(var(--cl-black));
+  }
+}
+
+.field {
+  flex-grow: 1;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  color: rgb(var(--cl-white));
+  background-color: rgb(var(--cl-accent) / 50%);
+  border-radius: var(--radius-sm);
+  transition: var(--trns);
+  transition-property: background-color, box-shadow;
+
+  &:focus {
+    background-color: rgb(var(--cl-accent));
+    box-shadow: var(--shadow-sm);
+  }
+
+  &::-webkit-search-cancel-button {
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' fill='none'%3E%3Cpath d='M21 7 7 21M7 7l14 14' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
