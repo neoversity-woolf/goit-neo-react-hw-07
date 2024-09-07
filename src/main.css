@@ -30,6 +30,14 @@
   --trns: 150ms ease-in;
   --bg-img: linear-gradient(#e5e7eb 1px, #0000 0),
     linear-gradient(90deg, #e5e7eb 1px, #0000 0);
+
+  /* Skeleton params */
+  --skeleton-avatar-width: 100%;
+  --skeleton-avatar-height: var(--skeleton-avatar-width);
+  --skeleton-details-width: 100%;
+  --skeleton-details-height: 7rem;
+  --skeleton-btn-width: 100%;
+  --skeleton-btn-height: 28px;
 }
 
 body {
@@ -38,7 +46,6 @@ body {
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
   font-size: var(--font-base);
-  /* color: rgb(var(--cl-white)); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
