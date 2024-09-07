@@ -16,14 +16,16 @@ export default function ContactList() {
   return (
     <div>
       <h2>Contact list</h2>
-      {loading && !error && <ContactsSkeleton cardsAmount={visibleContacts} />}
+      {loading && !error && <ContactsSkeleton />}
 
-      <ul className={css.list}>
-        {visibleContacts.length > 0 &&
-          visibleContacts.map(contact => (
-            <Contact key={contact.id} {...contact} />
-          ))}
-      </ul>
+      {!loading && (
+        <ul className={css.list}>
+          {visibleContacts.length > 0 &&
+            visibleContacts.map(contact => (
+              <Contact key={contact.id} {...contact} />
+            ))}
+        </ul>
+      )}
     </div>
   );
 }
