@@ -53,10 +53,10 @@
 }
 .field {
   display: flex;
-  align-items: center;
   gap: 1.5rem;
 
   &:last-child {
+    align-items: center;
     font-size: var(--font-sm);
     letter-spacing: 0.3em;
   }

@@ -1,13 +1,13 @@
 import Skeleton from 'react-loading-skeleton';
 import { PiUserCircleDuotone, PiPhoneDuotone } from 'react-icons/pi';
 import { useSelector } from 'react-redux';
-import { selectVisibleContacts } from '../../redux/selectors';
+import { selectFilteredContacts } from '../../redux/selectors';
 
 import css from './ContactsSkeleton.module.css';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 function ContactsSkeleton() {
-  const visibleContacts = useSelector(selectVisibleContacts);
+  const visibleContacts = useSelector(selectFilteredContacts);
 
   return (
     <ul className={css.list}>

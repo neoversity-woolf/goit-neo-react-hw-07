@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { SkeletonTheme } from 'react-loading-skeleton';
 import { useDispatch } from 'react-redux';
-import { fetchContacts } from './redux/operations';
+import { fetchContacts } from './redux/contactsOps';
 import { ContactForm, SearchBox, ContactList } from '@components';
 
 export default function App() {

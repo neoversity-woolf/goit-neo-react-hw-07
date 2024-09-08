@@ -5,7 +5,7 @@ export const selectLoading = ({ contacts }) => contacts.loading;
 export const selectError = ({ contacts }) => contacts.error;
 export const selectNameFilter = ({ filters }) => filters.name;
 
-export const selectVisibleContacts = createSelector(
+export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter],
   (contacts, searchName) =>
     contacts.filter(contact => contact.name.toLowerCase().includes(searchName))

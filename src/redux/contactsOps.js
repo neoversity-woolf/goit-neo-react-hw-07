@@ -5,7 +5,7 @@ export const apiKey = import.meta.env.VITE_API_KEY;
 axios.defaults.baseURL = `https://${apiKey}.mockapi.io`;
 
 export const fetchContacts = createAsyncThunk(
-  'contacts/fetchContacts',
+  'contacts/fetchAll',
   async (_, thunkAPI) => {
     try {
       const response = await axios.get('/contacts');
